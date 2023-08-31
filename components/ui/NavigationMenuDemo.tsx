@@ -58,17 +58,17 @@ export function NavigationMenuDemo() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Products</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="gap-3 p-6 md:w-[400px] lg:w-[500px] ">
               <li className="row-span-3">
                 <NavigationMenuLink asChild></NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
-                AI Products
+              <ListItem href="/docs" title="Physical Product">
+                Top 10 Anime Figurine
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
+              <ListItem href="/docs/installation" title="Digital Product">
+                One Piece Wano Arc Wallpaper
               </ListItem>
             </ul>
           </NavigationMenuContent>

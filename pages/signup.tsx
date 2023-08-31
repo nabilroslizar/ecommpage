@@ -12,8 +12,21 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const login = () => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      return;
+    } else {
+      router.push("/");
+    }
+  });
   return (
     <div className="mx-auto max-w-xl mt-40 sm:">
       <Card>
@@ -24,12 +37,8 @@ const login = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
-          <div className="grid grid-cols-2 gap-6">
-            <Button variant="outline">
-              <Icons.gitHub className="mr-2 h-4 w-4" />
-              Github
-            </Button>
-            <Button variant="outline">
+          <div className="grid gap-6">
+            <Button variant="outline" onClick={() => signIn("google")}>
               <Icons.google className="mr-2 h-4 w-4" />
               Google
             </Button>

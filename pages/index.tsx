@@ -1,6 +1,6 @@
 import MyAvatar from "@/components/ui/MyAvatar";
 import { NavigationMenuDemo } from "@/components/ui/NavigationMenuDemo";
-import Lesgo from "@/components/ui/lesgo";
+import Lesgo from "@/components/ui/Lesgo";
 import { GiPirateFlag } from "react-icons/gi";
 import { useSession, signIn, signOut } from "next-auth/react";
 
@@ -9,12 +9,14 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="bg-slate-200 ">
+      <div className="bg-slate-200">
         <div className=" flex  items-center justify-between p-6 lg:px-8">
           <div className="flex flex-row gap-20 items-center justify-center">
             <div className="flex flex-row justify-center items-center gap-2">
               <GiPirateFlag className="text-4xl"></GiPirateFlag>
-              <div className="font-bold text-2xl text-black">LUFFY</div>
+              <div className="font-bold text-2xl text-black">
+                Anime Toy Store
+              </div>
             </div>
 
             <NavigationMenuDemo></NavigationMenuDemo>

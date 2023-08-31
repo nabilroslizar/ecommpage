@@ -12,7 +12,9 @@ const Lesgo = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <div className="px-4 py-2 bg-white font-semibold rounded-md">Lesgo</div>
+        <div className="px-4 py-2 bg-white font-semibold rounded-md">
+          Log in
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem>
